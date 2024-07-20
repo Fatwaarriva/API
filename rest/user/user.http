@@ -1,0 +1,7 @@
+@baseUrl = http://127.0.0.1/api/v1/testing
+@cType = application/json
+@password = password
+
+### GET USER
+get {{baseUrl}}
+Authorization: {{password}}

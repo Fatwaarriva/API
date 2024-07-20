@@ -1,0 +1,41 @@
+@baseUrl = http://127.0.0.1/api/v1/products
+@cType = application/json
+@password = password
+
+### GET PRODUCT
+get {{baseUrl}}/1
+token: {{password}}
+
+### POST PRODUCT
+post {{baseUrl}}
+Authorization:  {{password}}
+Content-Type: {{cType}}
+
+{
+    "data" : {
+        "attributes" :{
+            "name" : "Pulpen",
+            "price" : 2000
+        }
+    }
+}
+
+### PUT PRODUCT
+put {{baseUrl}}/2
+Authorization: {{password}}
+Content-Type: {{cType}}
+
+{
+    "data" : {
+        "attributes" :{
+            "name" : "Pulpen",
+            "price" : 8000
+        }
+    }
+}
+
+
+### DELETE PRODUCT
+delete {{baseUrl}}/4
+Authorization: {{password}}
+Content-Type: {{cType}}
