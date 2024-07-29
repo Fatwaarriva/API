@@ -1,50 +1,48 @@
-@baseUrl = http://127.0.0.1
+@baseUrl = http://127.0.0.1/api/v1/payment
 @cType = application/json
-@token = password
-@value = password
+@password = password
 
 ### ROUTE API PAYMENT
 
 ### get request payment
-GET {{baseUrl}}/api/v1/payment/
-Content-Type: {{cType}}
-{{token}}: {{value}}
+get {{baseUrl}}
+token: {{password}}
 
 ### INI BUAT GET DATA payment BY ID
-GET {{baseUrl}}/api/v1/payment/1
+post {{baseUrl}}
+Authorization:  {{password}}
 Content-Type: {{cType}}
-{{token}}: {{value}}
 
 ### post request payment
-POST {{baseUrl}}/api/v1/payment/
+post {{baseUrl}}
+Authorization:  {{password}}
 Content-Type: {{cType}}
-{{token}}: {{value}}
 
 {
-    "order_id": "5",
-    "gross_amount": "190000",
-    "first_name": "mawan ganteng",
-    "last_name": "alwahyu",
-    "email": "john.doe@example.com",
-    "phone": "081234567890"
+    "order_id": "3",
+    "gross_amount": "8000",
+    "first_name": "Fatwa",
+    "last_name": "Arriva",
+    "email": "Arriva@example.com",
+    "phone": "081249013294"
 }
 
 ### put request payment by ID
-PUT {{baseUrl}}/api/v1/payment/5
+put {{baseUrl}}
+Authorization: {{password}}
 Content-Type: {{cType}}
-{{token}}: {{value}}
 
 {
-    "order_id": "5",
-    "gross_amount": "200000",
-    "first_name": "mawan ganteng",
-    "last_name": "alwahyu",
-    "email": "john.doe@example.com",
-    "transaction_status": "okehh",
-    "phone": "081234567890"
+    "order_id": "1",
+    "gross_amount": "1000",
+    "first_name": "Fatwa",
+    "last_name": "Arriva",
+    "email": "Arriva@example.com",
+    "transaction_status": "success",
+    "phone": "081249013294"
 }
 
 ### delete request payment by ID
-DELETE {{baseUrl}}/api/v1/payment/1
+delete {{baseUrl}}
+Authorization: {{password}}
 Content-Type: {{cType}}
-{{token}}: {{value}}

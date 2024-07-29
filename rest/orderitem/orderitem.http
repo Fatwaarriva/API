@@ -21,7 +21,7 @@ Content-Type: {{cType}}
 }
 
 ### Update order item by ID
-PUT {{baseUrl}}/api/v1/orderitem/2
+PUT {{baseUrl}}/2
 Authorization: {{password}}
 Content-Type: {{cType}}
 
@@ -32,21 +32,21 @@ Content-Type: {{cType}}
 }
 
 ### Get order item by ID
-GET {{baseUrl}}/api/v1/orderitem/2
+GET {{baseUrl}}/3
 Authorization: {{password}}
 Content-Type: {{cType}}
 
 ### Delete an order item
-DELETE {{baseUrl}}/api/v1/orderitem/2
+DELETE {{baseUrl}}/2
 Authorization: {{password}}
 Content-Type: {{cType}}
 
 ### Show data join
-GET {{baseUrl}}/api/v1/orderitem-join
+GET {{baseUrl}}
 Authorization: {{password}}
 Content-Type: {{cType}}
 
 ### Show data join by ID
-GET {{baseUrl}}/api/v1/orderitem-join/2
+GET {{baseUrl}}/2
 Authorization: {{password}}
 Content-Type: {{cType}}
